@@ -1,8 +1,3 @@
-/**
- * Customer.java
- * -------------
- * Model class representing a Customer who buys products from farmers.
- */
 public class Customer {
 
     private int id;
@@ -12,7 +7,6 @@ public class Customer {
     private String password;
     private String address;
 
-    // Constructor used when creating a NEW customer
     public Customer(String name, String phone, String email, String password, String address) {
         this.name = name;
         this.phone = phone;
@@ -21,7 +15,6 @@ public class Customer {
         this.address = address;
     }
 
-    // Constructor used when reading an EXISTING customer from the database
     public Customer(int id, String name, String phone, String email, String password, String address) {
         this.id = id;
         this.name = name;
@@ -31,7 +24,6 @@ public class Customer {
         this.address = address;
     }
 
-    // ---------- Getters and Setters ----------
 
     public int getId() {
         return id;
