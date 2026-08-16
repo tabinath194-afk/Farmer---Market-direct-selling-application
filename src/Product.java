@@ -1,9 +1,3 @@
-/**
- * Product.java
- * ------------
- * Model class representing an agricultural Product
- * that a Farmer has listed for sale.
- */
 public class Product {
 
     private int id;
@@ -14,7 +8,7 @@ public class Product {
     private int quantity;
     private double price;
 
-    // Constructor used when creating a NEW product
+   
     public Product(int farmerId, String name, String category, String description, int quantity, double price) {
         this.farmerId = farmerId;
         this.name = name;
@@ -24,7 +18,6 @@ public class Product {
         this.price = price;
     }
 
-    // Constructor used when reading an EXISTING product from the database
     public Product(int id, int farmerId, String name, String category, String description, int quantity, double price) {
         this.id = id;
         this.farmerId = farmerId;
@@ -34,8 +27,6 @@ public class Product {
         this.quantity = quantity;
         this.price = price;
     }
-
-    // ---------- Getters and Setters ----------
 
     public int getId() {
         return id;
