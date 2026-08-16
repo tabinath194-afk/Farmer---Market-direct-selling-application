@@ -1,9 +1,3 @@
-/**
- * Order.java
- * ----------
- * Model class representing an Order placed by a Customer
- * for a Product listed by a Farmer.
- */
 public class Order {
 
     private int id;
@@ -14,7 +8,6 @@ public class Order {
     private String orderDate;
     private String status;
 
-    // Constructor used when creating a NEW order
     public Order(int customerId, int productId, int quantity, double totalPrice, String orderDate, String status) {
         this.customerId = customerId;
         this.productId = productId;
@@ -24,7 +17,6 @@ public class Order {
         this.status = status;
     }
 
-    // Constructor used when reading an EXISTING order from the database
     public Order(int id, int customerId, int productId, int quantity, double totalPrice, String orderDate, String status) {
         this.id = id;
         this.customerId = customerId;
@@ -34,8 +26,6 @@ public class Order {
         this.orderDate = orderDate;
         this.status = status;
     }
-
-    // ---------- Getters and Setters ----------
 
     public int getId() {
         return id;
