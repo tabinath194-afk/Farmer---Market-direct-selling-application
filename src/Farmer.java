@@ -1,10 +1,3 @@
-/**
- * Farmer.java
- * -----------
- * Model class representing a Farmer.
- * A "model" class simply stores data (fields) and provides
- * getters/setters to read and update that data.
- */
 public class Farmer {
 
     private int id;
@@ -13,8 +6,7 @@ public class Farmer {
     private String email;
     private String password;
     private String location;
-
-    // Constructor used when creating a NEW farmer (no id yet, since MySQL will auto-generate it)
+    
     public Farmer(String name, String phone, String email, String password, String location) {
         this.name = name;
         this.phone = phone;
@@ -23,7 +15,6 @@ public class Farmer {
         this.location = location;
     }
 
-    // Constructor used when reading an EXISTING farmer from the database (id is known)
     public Farmer(int id, String name, String phone, String email, String password, String location) {
         this.id = id;
         this.name = name;
@@ -32,8 +23,6 @@ public class Farmer {
         this.password = password;
         this.location = location;
     }
-
-    // ---------- Getters and Setters ----------
 
     public int getId() {
         return id;
