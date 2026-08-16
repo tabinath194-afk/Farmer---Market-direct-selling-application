@@ -6,19 +6,9 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-/**
- * Main.java
- * ---------
- * This is the console-based entry point for the Farmer-to-Market
- * Direct Selling Platform. It displays a menu and performs all
- * database operations using JDBC + PreparedStatement.
- *
- * NOTE: This is a simple console (text menu) test application.
- * The web/index.html file is a separate static front-end demo page.
- */
+
 public class Main {
 
-    // Single Scanner reused for all console input
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -63,9 +53,6 @@ public class Main {
         scanner.close();
     }
 
-    // ---------------------------------------------------------------
-    // Menu display
-    // ---------------------------------------------------------------
     private static void printMenu() {
         System.out.println();
         System.out.println("========================================");
@@ -82,9 +69,6 @@ public class Main {
         System.out.println("========================================");
     }
 
-    // ---------------------------------------------------------------
-    // 1. Farmer Registration
-    // ---------------------------------------------------------------
     private static void registerFarmer() {
         System.out.println("\n--- Farmer Registration ---");
         String name = readString("Enter name: ");
@@ -122,9 +106,6 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // 2. Customer Registration
-    // ---------------------------------------------------------------
     private static void registerCustomer() {
         System.out.println("\n--- Customer Registration ---");
         String name = readString("Enter name: ");
@@ -162,9 +143,7 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // 3. Add Product
-    // ---------------------------------------------------------------
+  
     private static void addProduct() {
         System.out.println("\n--- Add Product ---");
         int farmerId = readInt("Enter your Farmer ID: ");
@@ -199,9 +178,7 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // 4. View Products
-    // ---------------------------------------------------------------
+  
     private static void viewProducts() {
         System.out.println("\n--- Available Products ---");
 
@@ -229,9 +206,7 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // 5. Search Product
-    // ---------------------------------------------------------------
+  
     private static void searchProduct() {
         System.out.println("\n--- Search Product ---");
         String keyword = readString("Enter product name or category to search: ");
@@ -276,9 +251,7 @@ public class Main {
         System.out.println("Price      : " + rs.getDouble("price"));
     }
 
-    // ---------------------------------------------------------------
-    // 6. Place Order
-    // ---------------------------------------------------------------
+    
     private static void placeOrder() {
         System.out.println("\n--- Place Order ---");
         int customerId = readInt("Enter your Customer ID: ");
@@ -353,9 +326,7 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // 7. View Orders
-    // ---------------------------------------------------------------
+    
     private static void viewOrders() {
         System.out.println("\n--- View Orders ---");
         System.out.println("1. View all orders");
@@ -406,9 +377,7 @@ public class Main {
         }
     }
 
-    // ---------------------------------------------------------------
-    // Helper methods for reading console input safely
-    // ---------------------------------------------------------------
+  
     private static String readString(String prompt) {
         System.out.print(prompt);
         return scanner.nextLine().trim();
